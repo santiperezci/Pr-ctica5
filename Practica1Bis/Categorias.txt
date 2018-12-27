@@ -1,0 +1,4 @@
+Alimentos, Al
+Moda, Mod
+Electrónica, El
+Libros, Lib

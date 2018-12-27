@@ -1,0 +1,7 @@
+Javier, javier@gmail.com, javier123
+Santiago,santiperezci@gmail.com, pass123
+Daniel, tradeos@gmail.com, daniel123
+Juan,juagut98@gmail.com,juangut
+jose,jose@gmail.com,jose123
+alvaro,alvaro@gmail.com,alvaro123
+Alberto,alberto@gmail.com,alberto123

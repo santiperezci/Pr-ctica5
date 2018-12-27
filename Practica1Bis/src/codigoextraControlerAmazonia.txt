@@ -1,0 +1,70 @@
+/ TODO Auto-generated method stub
+		usuarioRegistrado=false;
+		//System.out.println("Bienvenido a nuestra web, again");
+		leerPropiedades();
+		usuarios=new Users();
+		String al=txtArAlimentos.getText();
+		//An empty label
+		Label label1 = new Label();
+		//A label with the text element
+		Label label2 = new Label("Search");
+		/*gridpane.setPadding(new Insets(5));
+	    gridpane.setHgap(10);
+	    gridpane.setVgap(10);
+	    //GridPane.setHalignment(label2, HPos.CENTER);*/
+		//gridpane.add(label2, 0, 0);
+		//A label with the text element and graphical icon
+		//Image image = new Image(getClass().getResourceAsStream("labels.jpg"));
+		//Label label3 = new Label("Search", new ImageView(image));
+		if(usuarios.verificar(usuario)==false) {
+			System.out.println("Usuario no registrado");
+			registrarUsuarioW();
+		}
+		else {
+			usuarioRegistrado=true;
+			
+		}
+		amazonia=new Categorías();
+
+
+
+
+
+
+public static void leerPropiedades() {
+		String email="", username="", password="";
+	
+		try(FileReader reader =  new FileReader("config")) {
+	        Properties properties = new Properties();
+	        properties.load(reader);
+	        email = properties.getProperty("email");
+	        username = properties.getProperty("username");
+	        password = properties.getProperty("password");
+		}
+	        catch (Exception e) {
+	       e.printStackTrace();
+	       }
+		
+	        if(email!=null && username!=null && password!=null) {
+	        	usuario=new User(username, email, password);
+	        	/*@FXML
+	        	try {
+	        		FXMLLoader fxmlLoader = new FXMLLoader(ControladorAmazonia.class.getClass().getClassLoader().getResource("registro.fxml"));
+		        	 Parent root = fxmlLoader.load();
+		       		 Stage stage = new Stage();
+		       		 stage.initModality(Modality.APPLICATION_MODAL);
+		       		 stage.setOpacity(1);
+		       		 stage.setTitle("My New Stage Title");
+		       		 stage.setScene(new Scene(root, 850,850));
+		       		 stage.showAndWait();
+	        	}
+	       		 catch(IOException ioe) {
+	       			 ioe.printStackTrace();
+	       		 
+	        	System.out.println(usuario.email);
+		        System.out.println(usuario.name);
+		        System.out.println(usuario.password);
+	       		 }*/
+	        }
+	        
+	}
